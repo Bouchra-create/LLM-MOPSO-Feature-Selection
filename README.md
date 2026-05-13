@@ -60,7 +60,42 @@ A Large Language Model is used to assign **importance scores** to features:
 
   * Guides population initialization
   * Biases search toward relevant features
+    
+Basic prompt:
+You are an expert in medical data analysis.
+Assign an importance score (0–1) to each feature based on its relevance for classification.
 
+Advanced prompt :
+f"""
+You are an expert in Parkinson's disease diagnosis using voice measurements.
+
+TASK:
+Assign importance scores (0–1) to features based on their ability to predict Parkinson’s disease.
+
+DOMAIN KNOWLEDGE:
+- Features related to vocal stability, jitter, shimmer, and frequency are usually highly relevant.
+- Noise or unrelated statistical features are less important.
+
+SCORING:
+- 1 = highly discriminative biomarker
+- 0 = irrelevant
+- Avoid equal scores
+- Use full range [0,1]
+
+CRITERIA:
+- clinical relevance
+- discriminative power
+- redundancy
+- robustness
+
+OUTPUT:
+Return ONLY JSON:
+{{"feature": score}}
+
+FEATURES:
+{list(ba
+
+Return ONLY JSON.
 ---
 
 Evaluation Protocol
