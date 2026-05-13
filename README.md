@@ -35,7 +35,7 @@ Feature selection is modeled as a **multi-objective optimization problem**:
 This is implemented as:
 
 * Objective 1: ( \min |S| )
-* Objective 2: ( \min (-F1) )
+* Objective 2: ( \min (-F1) ) -> max F1
 
 ---
 
