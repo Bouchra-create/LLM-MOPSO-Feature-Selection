@@ -68,8 +68,6 @@ Evaluation Protocol
 * Classifier: Random Forest
 * Validation: Stratified 10-fold cross-validation
 * Metrics:
-
-  * F1-score (weighted)
   * Hypervolume (HV)
 * Final evaluation on independent **test set**
 
